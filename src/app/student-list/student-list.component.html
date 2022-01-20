@@ -1,0 +1,30 @@
+<p>student-list works!</p>
+<h3>student-list</h3>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>projects</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let students of s">
+        <td> {{students.firstName}} </td>
+        <td> {{students.lastName}} </td>      
+        <td> {{students.mobile}} </td>
+        <td> {{students.email}} </td>
+        <td> <table class="table table-striped">
+           <thead> <tr> <th>Project Name</th> <th>Duration</th> </tr> </thead>
+           <tbody>
+               <tr *ngFor = "let project of students.projects">
+                   <td> {{project.projectName}} </td>
+                   <td> {{project.projectDuration}} </td>
+               </tr>
+           </tbody>
+        </table> </td>
+        </tr>
+    </tbody>
+</table>
